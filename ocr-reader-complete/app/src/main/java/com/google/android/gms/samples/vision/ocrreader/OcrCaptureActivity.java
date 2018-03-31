@@ -553,7 +553,6 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
                 try {
                     JSONObject serverResp = new JSONObject(response.toString());
                     try {
-
                         JSONArray result = serverResp.getJSONArray("items");
                         JSONObject linkobj = result.getJSONObject(0);
                         String link = linkobj.getString("link");

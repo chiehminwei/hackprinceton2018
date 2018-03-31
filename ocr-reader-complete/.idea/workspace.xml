@@ -87,8 +87,8 @@
       <file leaf-file-name="OcrCaptureActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/OcrCaptureActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="559" column="49" lean-forward="true" selection-start-line="559" selection-start-column="49" selection-end-line="559" selection-end-column="49" />
+            <state relative-caret-position="311">
+              <caret line="558" column="49" lean-forward="true" selection-start-line="558" selection-start-column="49" selection-end-line="558" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5566#6105#0" expanded="true" />
@@ -106,9 +106,9 @@
                 <element signature="e#17031#17032#0" expanded="true" />
                 <element signature="e#17204#17233#0" expanded="true" />
                 <element signature="e#17278#17289#0" expanded="true" />
-                <marker date="1522522583000" expanded="true" signature="23311:23317" ph="{...}" />
-                <marker date="1522522583000" expanded="false" signature="24414:24429" ph=" { " />
-                <marker date="1522522583000" expanded="false" signature="24442:24452" ph=" }" />
+                <marker date="1522523196000" expanded="true" signature="23310:23316" ph="{...}" />
+                <marker date="1522523196000" expanded="false" signature="24413:24428" ph=" { " />
+                <marker date="1522523196000" expanded="false" signature="24441:24451" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -2074,7 +2074,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522522590980" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522524452238" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2122,7 +2122,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522522590980" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522524452238" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2284,7 +2284,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522522590981" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522524452239" />
       </method>
     </configuration>
     <list size="1">
@@ -2421,9 +2421,9 @@
             <element signature="e#17031#17032#0" expanded="true" />
             <element signature="e#17204#17233#0" expanded="true" />
             <element signature="e#17278#17289#0" expanded="true" />
-            <marker date="1522522583000" expanded="true" signature="23311:23317" ph="{...}" />
-            <marker date="1522522583000" expanded="false" signature="24414:24429" ph=" { " />
-            <marker date="1522522583000" expanded="false" signature="24442:24452" ph=" }" />
+            <marker date="1522523196000" expanded="true" signature="23310:23316" ph="{...}" />
+            <marker date="1522523196000" expanded="false" signature="24413:24428" ph=" { " />
+            <marker date="1522523196000" expanded="false" signature="24441:24451" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -2512,9 +2512,9 @@
             <element signature="e#17031#17032#0" expanded="true" />
             <element signature="e#17204#17233#0" expanded="true" />
             <element signature="e#17278#17289#0" expanded="true" />
-            <marker date="1522522583000" expanded="true" signature="23311:23317" ph="{...}" />
-            <marker date="1522522583000" expanded="false" signature="24414:24429" ph=" { " />
-            <marker date="1522522583000" expanded="false" signature="24442:24452" ph=" }" />
+            <marker date="1522523196000" expanded="true" signature="23310:23316" ph="{...}" />
+            <marker date="1522523196000" expanded="false" signature="24413:24428" ph=" { " />
+            <marker date="1522523196000" expanded="false" signature="24441:24451" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -2668,9 +2668,9 @@
             <element signature="e#17031#17032#0" expanded="true" />
             <element signature="e#17204#17233#0" expanded="true" />
             <element signature="e#17278#17289#0" expanded="true" />
-            <marker date="1522522583000" expanded="true" signature="23311:23317" ph="{...}" />
-            <marker date="1522522583000" expanded="false" signature="24414:24429" ph=" { " />
-            <marker date="1522522583000" expanded="false" signature="24442:24452" ph=" }" />
+            <marker date="1522523196000" expanded="true" signature="23310:23316" ph="{...}" />
+            <marker date="1522523196000" expanded="false" signature="24413:24428" ph=" { " />
+            <marker date="1522523196000" expanded="false" signature="24441:24451" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -2745,9 +2745,9 @@
             <element signature="e#17031#17032#0" expanded="true" />
             <element signature="e#17204#17233#0" expanded="true" />
             <element signature="e#17278#17289#0" expanded="true" />
-            <marker date="1522522583000" expanded="true" signature="23311:23317" ph="{...}" />
-            <marker date="1522522583000" expanded="false" signature="24414:24429" ph=" { " />
-            <marker date="1522522583000" expanded="false" signature="24442:24452" ph=" }" />
+            <marker date="1522523196000" expanded="true" signature="23310:23316" ph="{...}" />
+            <marker date="1522523196000" expanded="false" signature="24413:24428" ph=" { " />
+            <marker date="1522523196000" expanded="false" signature="24441:24451" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -2822,9 +2822,9 @@
             <element signature="e#17031#17032#0" expanded="true" />
             <element signature="e#17204#17233#0" expanded="true" />
             <element signature="e#17278#17289#0" expanded="true" />
-            <marker date="1522522583000" expanded="true" signature="23311:23317" ph="{...}" />
-            <marker date="1522522583000" expanded="false" signature="24414:24429" ph=" { " />
-            <marker date="1522522583000" expanded="false" signature="24442:24452" ph=" }" />
+            <marker date="1522523196000" expanded="true" signature="23310:23316" ph="{...}" />
+            <marker date="1522523196000" expanded="false" signature="24413:24428" ph=" { " />
+            <marker date="1522523196000" expanded="false" signature="24441:24451" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -2906,8 +2906,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/google/android/gms/samples/vision/ocrreader/OcrCaptureActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="559" column="49" lean-forward="true" selection-start-line="559" selection-start-column="49" selection-end-line="559" selection-end-column="49" />
+        <state relative-caret-position="311">
+          <caret line="558" column="49" lean-forward="true" selection-start-line="558" selection-start-column="49" selection-end-line="558" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5566#6105#0" expanded="true" />
@@ -2925,9 +2925,9 @@
             <element signature="e#17031#17032#0" expanded="true" />
             <element signature="e#17204#17233#0" expanded="true" />
             <element signature="e#17278#17289#0" expanded="true" />
-            <marker date="1522522583000" expanded="true" signature="23311:23317" ph="{...}" />
-            <marker date="1522522583000" expanded="false" signature="24414:24429" ph=" { " />
-            <marker date="1522522583000" expanded="false" signature="24442:24452" ph=" }" />
+            <marker date="1522523196000" expanded="true" signature="23310:23316" ph="{...}" />
+            <marker date="1522523196000" expanded="false" signature="24413:24428" ph=" { " />
+            <marker date="1522523196000" expanded="false" signature="24441:24451" ph=" }" />
           </folding>
         </state>
       </provider>
