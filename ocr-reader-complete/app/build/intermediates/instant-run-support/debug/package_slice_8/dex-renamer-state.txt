@@ -1,0 +1,4 @@
+#Sat Mar 31 00:04:26 EDT 2018
+base.0=/Users/Jimmy/hackprinceton/android-vision/visionSamples/ocr-codelab/ocr-reader-complete/app/build/intermediates/transforms/dexMerger/debug/8
+renamed.0=classes.dex
+file.0=/Users/Jimmy/hackprinceton/android-vision/visionSamples/ocr-codelab/ocr-reader-complete/app/build/intermediates/transforms/dexMerger/debug/8/classes.dex
