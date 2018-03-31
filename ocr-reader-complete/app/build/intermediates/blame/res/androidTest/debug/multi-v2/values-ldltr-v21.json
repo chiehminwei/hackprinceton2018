@@ -1,6 +1,21 @@
 {
     "logs": [
         {
+            "outputFile": "/Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "/Users/Jimmy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/7d5653ddaa4093c6849d8ab44dae9497/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "/Users/Jimmy/hackprinceton/android-vision/visionSamples/ocr-codelab/ocr-reader-complete/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
             "map": [
                 {

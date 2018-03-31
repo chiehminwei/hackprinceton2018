@@ -26,6 +26,10 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
@@ -60,7 +64,7 @@ import android.Manifest;
  * rear facing camera. During detection overlay graphics are drawn to indicate the position,
  * size, and contents of each TextBlock.
  */
-public final class OcrCaptureActivity extends AppCompatActivity {
+public final class OcrCaptureActivity extends AppCompatActivity implements LocationListener {
     private static final String TAG = "OcrCaptureActivity";
 
     // Intent request code to handle updating play services if needed.
@@ -86,6 +90,8 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     private TextToSpeech tts;
 
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
+    LocationManager locationManager;
+    String provider;
     /**
      * Initializes the UI and creates the detector pipeline.
      */
@@ -132,7 +138,9 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                 };
         tts = new TextToSpeech(this.getApplicationContext(), listener);
 
-
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        provider = locationManager.getBestProvider(new Criteria(), false);
+        checkLocationPermission();
     }
 
     /**
@@ -151,8 +159,8 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                 // this thread waiting for the user's response! After the user
                 // sees the explanation, try again to request the permission.
                 new AlertDialog.Builder(this)
-                        .setTitle(R.string.title_location_permission)
-                        .setMessage(R.string.text_location_permission)
+                        .setTitle("R.string.title_location_permission")
+                        .setMessage("R.string.text_location_permission")
                         .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
@@ -175,37 +183,6 @@ public final class OcrCaptureActivity extends AppCompatActivity {
             return false;
         } else {
             return true;
-        }
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode,
-                                           String permissions[], int[] grantResults) {
-        switch (requestCode) {
-            case MY_PERMISSIONS_REQUEST_LOCATION: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                    // permission was granted, yay! Do the
-                    // location-related task you need to do.
-                    if (ContextCompat.checkSelfPermission(this,
-                            Manifest.permission.ACCESS_FINE_LOCATION)
-                            == PackageManager.PERMISSION_GRANTED) {
-
-                        //Request location updates:
-                        locationManager.requestLocationUpdates(provider, 400, 1, this);
-                    }
-
-                } else {
-
-                    // permission denied, boo! Disable the
-                    // functionality that depends on this permission.
-
-                }
-                return;
-            }
-
         }
     }
 
@@ -311,6 +288,12 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         startCameraSource();
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED) {
+
+            locationManager.requestLocationUpdates(provider, 400, 1, this);
+        }
     }
 
     /**
@@ -321,6 +304,12 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         super.onPause();
         if (mPreview != null) {
             mPreview.stop();
+        }
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED) {
+
+            locationManager.removeUpdates(this);
         }
     }
 
@@ -356,35 +345,63 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode,
                                            @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
-        if (requestCode != RC_HANDLE_CAMERA_PERM) {
-            Log.d(TAG, "Got unexpected permission result: " + requestCode);
-            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-            return;
-        }
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_LOCATION: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
-        if (grantResults.length != 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            Log.d(TAG, "Camera permission granted - initialize the camera source");
-            // we have permission, so create the camerasource
-            boolean autoFocus = getIntent().getBooleanExtra(AutoFocus,false);
-            boolean useFlash = getIntent().getBooleanExtra(UseFlash, false);
-            createCameraSource(autoFocus, useFlash);
-            return;
-        }
+                    // permission was granted, yay! Do the
+                    // location-related task you need to do.
+                    if (ContextCompat.checkSelfPermission(this,
+                            Manifest.permission.ACCESS_FINE_LOCATION)
+                            == PackageManager.PERMISSION_GRANTED) {
 
-        Log.e(TAG, "Permission not granted: results len = " + grantResults.length +
-                " Result code = " + (grantResults.length > 0 ? grantResults[0] : "(empty)"));
+                        //Request location updates:
+                        locationManager.requestLocationUpdates(provider, 400, 1, this);
+                    }
 
-        DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                finish();
+                } else {
+
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+
+                }
+                return;
             }
-        };
+            case RC_HANDLE_CAMERA_PERM: {
+                if (grantResults.length != 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Log.d(TAG, "Camera permission granted - initialize the camera source");
+                    // we have permission, so create the camerasource
+                    boolean autoFocus = getIntent().getBooleanExtra(AutoFocus,false);
+                    boolean useFlash = getIntent().getBooleanExtra(UseFlash, false);
+                    createCameraSource(autoFocus, useFlash);
+                    return;
+                }
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Multitracker sample")
-                .setMessage(R.string.no_camera_permission)
-                .setPositiveButton(R.string.ok, listener)
-                .show();
+                Log.e(TAG, "Permission not granted: results len = " + grantResults.length +
+                        " Result code = " + (grantResults.length > 0 ? grantResults[0] : "(empty)"));
+
+                DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        finish();
+                    }
+                };
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Multitracker sample")
+                        .setMessage(R.string.no_camera_permission)
+                        .setPositiveButton(R.string.ok, listener)
+                        .show();
+            }
+
+        }
+
+//        if (requestCode != RC_HANDLE_CAMERA_PERM) {
+//            Log.d(TAG, "Got unexpected permission result: " + requestCode);
+//            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+//            return;
+//        }
     }
 
     /**
@@ -438,6 +455,26 @@ public final class OcrCaptureActivity extends AppCompatActivity {
             Log.d(TAG,"no text detected");
         }
         return text != null;
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+
+    }
+
+    @Override
+    public void onStatusChanged(String s, int i, Bundle bundle) {
+
+    }
+
+    @Override
+    public void onProviderEnabled(String s) {
+
+    }
+
+    @Override
+    public void onProviderDisabled(String s) {
+
     }
 
     private class CaptureGestureListener extends GestureDetector.SimpleOnGestureListener {
