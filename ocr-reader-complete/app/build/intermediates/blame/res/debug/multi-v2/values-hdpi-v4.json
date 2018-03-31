@@ -36,7 +36,7 @@
             "outputFile": "/Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "/Users/Jon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/095ecbf226d1b5df9c79b1204153c686/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "source": "/Users/Jon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/31d23958c702fedf102bdd327694118d/res/values-hdpi-v4/values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

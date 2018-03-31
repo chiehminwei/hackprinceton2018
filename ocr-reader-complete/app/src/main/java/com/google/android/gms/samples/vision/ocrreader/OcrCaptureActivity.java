@@ -69,6 +69,7 @@ import java.util.Locale;
 
 import android.Manifest;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -459,7 +460,6 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
             text = graphic.getTextBlock();
             if (text != null && text.getValue() != null) {
                 Log.d(TAG, "text data is being spoken! " + text.getValue());
-
                 getImage(text.getValue());
                 // Speak the string.
                 tts.speak(text.getValue(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
@@ -527,7 +527,8 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
     }
 
     public void getImage(String text){
-        String url = "https://www.googleapis.com/customsearch/v1";
+        String url = "https://francis.stdlib.com/googlecse/";
+        // String url = "https://www.googleapis.com/customsearch/v1";
 
         RequestParams rp = new RequestParams();
 
@@ -551,6 +552,15 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
                 Log.d("asd", "---------------- this is response : " + response);
                 try {
                     JSONObject serverResp = new JSONObject(response.toString());
+                    try {
+
+                        JSONArray result = serverResp.getJSONArray("items");
+                        JSONObject linkobj = result.getJSONObject(0);
+                        String link = linkobj.getString("link");
+                        System.out.println(link);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
                 } catch (JSONException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();

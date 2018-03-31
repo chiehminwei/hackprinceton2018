@@ -72,7 +72,7 @@
             "outputFile": "/Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/Jon/.gradle/caches/transforms-1/files-1.1/design-24.2.0.aar/a9963e19f6e574eff0a7ee102d114907/res/values-land/values-land.xml",
+                    "source": "/Users/Jon/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/1ada7a96f6120defa57a680d6756e028/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -91,7 +91,7 @@
                     }
                 },
                 {
-                    "source": "/Users/Jon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/095ecbf226d1b5df9c79b1204153c686/res/values-land/values-land.xml",
+                    "source": "/Users/Jon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/31d23958c702fedf102bdd327694118d/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

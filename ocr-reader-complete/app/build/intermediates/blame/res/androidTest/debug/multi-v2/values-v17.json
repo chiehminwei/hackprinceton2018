@@ -36,7 +36,7 @@
             "outputFile": "/Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-v17/values-v17.xml",
             "map": [
                 {
-                    "source": "/Users/Jon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/095ecbf226d1b5df9c79b1204153c686/res/values-v17/values-v17.xml",
+                    "source": "/Users/Jon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/31d23958c702fedf102bdd327694118d/res/values-v17/values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,26,29,32,35,39,42,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
