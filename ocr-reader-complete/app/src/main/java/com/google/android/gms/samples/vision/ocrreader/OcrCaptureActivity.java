@@ -16,8 +16,11 @@
 package com.google.android.gms.samples.vision.ocrreader;
 
 import com.google.android.gms.location.places.GeoDataClient;
+import com.google.android.gms.location.places.PlaceLikelihood;
+import com.google.android.gms.location.places.PlaceLikelihoodBufferResponse;
 import com.google.android.gms.location.places.Places;
 import com.google.android.gms.location.places.PlaceDetectionClient;
+
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.Manifest;
@@ -58,6 +61,8 @@ import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.samples.vision.ocrreader.ui.camera.CameraSource;
 import com.google.android.gms.samples.vision.ocrreader.ui.camera.CameraSourcePreview;
 import com.google.android.gms.samples.vision.ocrreader.ui.camera.GraphicOverlay;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -69,7 +74,6 @@ import java.util.Locale;
 
 import android.Manifest;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -108,6 +112,11 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     LocationManager locationManager;
     String provider;
+
+    protected GeoDataClient mGeoDataClient;
+    protected PlaceDetectionClient mPlaceDetectionClient;
+    String currentLocation;
+
     /**
      * Initializes the UI and creates the detector pipeline.
      */
@@ -153,6 +162,11 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
                     }
                 };
         tts = new TextToSpeech(this.getApplicationContext(), listener);
+
+        // Construct a GeoDataClient.
+        mGeoDataClient = Places.getGeoDataClient(this, null);
+        // Construct a PlaceDetectionClient.
+        mPlaceDetectionClient = Places.getPlaceDetectionClient(this, null);
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         provider = locationManager.getBestProvider(new Criteria(), false);
@@ -289,12 +303,12 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
         // to other detection examples to enable the text recognizer to detect small pieces of text.
         mCameraSource =
                 new CameraSource.Builder(getApplicationContext(), textRecognizer)
-                .setFacing(CameraSource.CAMERA_FACING_BACK)
-                .setRequestedPreviewSize(1280, 1024)
-                .setRequestedFps(2.0f)
-                .setFlashMode(useFlash ? Camera.Parameters.FLASH_MODE_TORCH : null)
-                .setFocusMode(autoFocus ? Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE : null)
-                .build();
+                        .setFacing(CameraSource.CAMERA_FACING_BACK)
+                        .setRequestedPreviewSize(1280, 1024)
+                        .setRequestedFps(2.0f)
+                        .setFlashMode(useFlash ? Camera.Parameters.FLASH_MODE_TORCH : null)
+                        .setFocusMode(autoFocus ? Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE : null)
+                        .build();
     }
 
     /**
@@ -389,7 +403,7 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
                 if (grantResults.length != 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     Log.d(TAG, "Camera permission granted - initialize the camera source");
                     // we have permission, so create the camerasource
-                    boolean autoFocus = getIntent().getBooleanExtra(AutoFocus,false);
+                    boolean autoFocus = getIntent().getBooleanExtra(AutoFocus, false);
                     boolean useFlash = getIntent().getBooleanExtra(UseFlash, false);
                     createCameraSource(autoFocus, useFlash);
                     return;
@@ -460,55 +474,47 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
             text = graphic.getTextBlock();
             if (text != null && text.getValue() != null) {
                 Log.d(TAG, "text data is being spoken! " + text.getValue());
+
                 getImage(text.getValue());
                 // Speak the string.
                 tts.speak(text.getValue(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
-            }
-            else {
+            } else {
                 Log.d(TAG, "text data is null");
             }
-        }
-        else {
-            Log.d(TAG,"no text detected");
+        } else {
+            Log.d(TAG, "no text detected");
         }
         return text != null;
     }
 
     @Override
     public void onLocationChanged(Location loc) {
-        //editLocation.setText("");
-        //pb.setVisibility(View.INVISIBLE);
-        Toast.makeText(
-                getBaseContext(),
-                "Location changed: Lat: " + loc.getLatitude() + " Lng: "
-                        + loc.getLongitude(), Toast.LENGTH_SHORT).show();
-        String longitude = "Longitude: " + loc.getLongitude();
-        Log.v(TAG, longitude);
-        String latitude = "Latitude: " + loc.getLatitude();
-        Log.v(TAG, latitude);
 
-        /*------- To get city name from coordinates -------- */
-        String cityName = null;
-        Geocoder gcd = new Geocoder(getBaseContext(), Locale.getDefault());
-        List<Address> addresses;
-        try {
-            addresses = gcd.getFromLocation(loc.getLatitude(),
-                    loc.getLongitude(), 1);
-            if (addresses.size() > 0) {
-                System.out.println(addresses.get(0).getLocality());
-                cityName = addresses.get(0).getLocality();
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        Task<PlaceLikelihoodBufferResponse> placeResult = mPlaceDetectionClient.getCurrentPlace(null);
+        placeResult.addOnCompleteListener(new OnCompleteListener<PlaceLikelihoodBufferResponse>() {
+            @Override
+            public void onComplete(@NonNull Task<PlaceLikelihoodBufferResponse> task) {
+                PlaceLikelihoodBufferResponse likelyPlaces = task.getResult();
+//                for (PlaceLikelihood placeLikelihood : likelyPlaces) {
+//                    Log.i(TAG, String.format("Place '%s' has likelihood: %g",
+//                            placeLikelihood.getPlace().getName(),
+//                            placeLikelihood.getLikelihood()));
+//                }
+                currentLocation = likelyPlaces.get(0).getPlace().getName().toString();
+                likelyPlaces.release();
             }
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-        String s = longitude + "\n" + latitude + "\n\nMy Current City is: "
-                + cityName;
-        Toast.makeText(
-                getBaseContext(),
-                s, Toast.LENGTH_SHORT).show();
-        Log.v(TAG, s);
-        //editLocation.setText(s);
+        });
     }
 
     @Override
@@ -527,8 +533,7 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
     }
 
     public void getImage(String text){
-        String url = "https://francis.stdlib.com/googlecse/";
-        // String url = "https://www.googleapis.com/customsearch/v1";
+        String url = "https://www.googleapis.com/customsearch/v1";
 
         RequestParams rp = new RequestParams();
 
@@ -552,14 +557,6 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
                 Log.d("asd", "---------------- this is response : " + response);
                 try {
                     JSONObject serverResp = new JSONObject(response.toString());
-                    try {
-                        JSONArray result = serverResp.getJSONArray("items");
-                        JSONObject linkobj = result.getJSONObject(0);
-                        String link = linkobj.getString("link");
-                        System.out.println(link);
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
                 } catch (JSONException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
