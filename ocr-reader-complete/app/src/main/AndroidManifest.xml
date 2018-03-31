@@ -24,6 +24,9 @@
         <meta-data
             android:name="com.google.android.gms.vision.DEPENDENCIES"
             android:value="ocr" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBuV9OIHXwrH6erpuLgEIomzZ9b_KRmTbY"/>
 
         <activity android:name="com.google.android.gms.samples.vision.ocrreader.OcrCaptureActivity"
             android:label="Read Text">
