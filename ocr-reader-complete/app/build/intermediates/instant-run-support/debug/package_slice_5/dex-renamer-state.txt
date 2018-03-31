@@ -1,4 +1,4 @@
-#Sat Mar 31 01:43:33 EDT 2018
-base.0=/Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/build/intermediates/transforms/dexMerger/debug/5
+#Sat Mar 31 13:40:43 EDT 2018
+base.0=/Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/build/intermediates/transforms/dexMerger/debug/30
+path.0=classes.dex
 renamed.0=classes.dex
-file.0=/Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/build/intermediates/transforms/dexMerger/debug/5/classes.dex

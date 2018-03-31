@@ -1,180 +1,184 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:1-35:12
-MERGED from [com.android.support:design:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/design-24.2.0.aar/d308a2d641a5231957315a210df9fc48/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-vision:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-vision-9.4.0.aar/f91288c8de2333100f95df3de16a7734/AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-base:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/671b682ebb3ff9aab20808d9bff57fa4/AndroidManifest.xml:16:1-24:12
-MERGED from [com.google.android.gms:play-services-tasks:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.4.0.aar/d6989dacf2924922f51f3af7273bc448/AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-basement:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.4.0.aar/b39f5c11a836e1e174eeccba36393b2a/AndroidManifest.xml:16:1-26:12
-MERGED from [com.android.support:appcompat-v7:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/7d5653ddaa4093c6849d8ab44dae9497/AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:support-v4:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-v4-24.2.0.aar/68e9825deb5f4262bd5d94eed9e80ecf/AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:recyclerview-v7:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-24.2.0.aar/b3d67da876d4f71935ebaafbd9896ea3/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/67aebe8a6a4e77792fadca37a76d6646/AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:support-core-ui:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/9c32c710f48840851d31ce00ab3ba9e4/AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:animated-vector-drawable:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-24.2.0.aar/893678c7d20b0b0d66fa94a38b646eae/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:support-vector-drawable:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-24.2.0.aar/3950fb5ec06490a6c75b01ae1939027b/AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:support-core-utils:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/da4fc566bfbaf9356b298359e83b9f26/AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:support-media-compat:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/02bd3054f53ec3f6a8865f897d91064a/AndroidManifest.xml:17:1-27:12
-MERGED from [com.android.support:support-compat:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/cf746b899d58171bbed007a6e3edc022/AndroidManifest.xml:17:1-27:12
-INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:1-35:12
+ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:1-37:12
+MERGED from [com.android.support:design:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/design-24.2.0.aar/a9963e19f6e574eff0a7ee102d114907/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-vision:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-vision-9.4.0.aar/75328ecd354b1871bc4ae6cb8c402bba/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-base:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/1a3593fa7c71802873f8ec925592a452/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.4.0.aar/f5e6b33999b8934a3d3915d047e5b8a9/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.4.0.aar/92b000bcf68216a07208b5495806e9a1/AndroidManifest.xml:16:1-26:12
+MERGED from [com.android.support:appcompat-v7:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/095ecbf226d1b5df9c79b1204153c686/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-v4:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-v4-24.2.0.aar/d219c787a9c32651b1a1b0977c5cf31e/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:recyclerview-v7:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-24.2.0.aar/3749f02ce68e61333ea074e4227f252e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/c19d712481edbc9898d7a89c3151af27/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-ui:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/bd8318d16ee6b2a1b37953292cce5388/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:animated-vector-drawable:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-24.2.0.aar/29bb7f8986b1d513421f780d151309d5/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-vector-drawable:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-24.2.0.aar/be3d947ef75e344a564d094357d51130/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:support-core-utils:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/7aa7e5981b7b10560a87005240d01447/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-media-compat:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/c73e7a08df850d2958325e994c4a570b/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-compat:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/697ad98d617fa8cb1dbe19c60f1516f4/AndroidManifest.xml:17:1-27:12
+INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:1-37:12
 	package
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:3:5-62
-		INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:3:5-62
+		INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:1-35:12
-		INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:1-37:12
+		INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:1-35:12
-		INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:1-37:12
+		INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:2:11-69
 	android:installLocation
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:4:5-35
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:4:5-35
 uses-feature#android.hardware.camera
-ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:6:5-60
+ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:6:5-60
 	android:name
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:6:19-57
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:6:19-57
 uses-permission#android.permission.CAMERA
-ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:8:5-65
+ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:8:5-65
 	android:name
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:8:22-62
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:8:22-62
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:9:5-78
+ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:9:5-78
 	android:name
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:9:22-76
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:9:22-76
+uses-permission#android.permission.INTERNET
+ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:10:5-67
+	android:name
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:10:22-64
 application
-ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:11:5-33:19
-MERGED from [com.android.support:design:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/design-24.2.0.aar/d308a2d641a5231957315a210df9fc48/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/design-24.2.0.aar/d308a2d641a5231957315a210df9fc48/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-vision:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-vision-9.4.0.aar/f91288c8de2333100f95df3de16a7734/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-vision:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-vision-9.4.0.aar/f91288c8de2333100f95df3de16a7734/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-base:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/671b682ebb3ff9aab20808d9bff57fa4/AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.android.gms:play-services-base:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/671b682ebb3ff9aab20808d9bff57fa4/AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.android.gms:play-services-tasks:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.4.0.aar/d6989dacf2924922f51f3af7273bc448/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.4.0.aar/d6989dacf2924922f51f3af7273bc448/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-basement:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.4.0.aar/b39f5c11a836e1e174eeccba36393b2a/AndroidManifest.xml:20:5-24:19
-MERGED from [com.google.android.gms:play-services-basement:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.4.0.aar/b39f5c11a836e1e174eeccba36393b2a/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:appcompat-v7:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/7d5653ddaa4093c6849d8ab44dae9497/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:appcompat-v7:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/7d5653ddaa4093c6849d8ab44dae9497/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-v4-24.2.0.aar/68e9825deb5f4262bd5d94eed9e80ecf/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-v4-24.2.0.aar/68e9825deb5f4262bd5d94eed9e80ecf/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/67aebe8a6a4e77792fadca37a76d6646/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/67aebe8a6a4e77792fadca37a76d6646/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/9c32c710f48840851d31ce00ab3ba9e4/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/9c32c710f48840851d31ce00ab3ba9e4/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-24.2.0.aar/893678c7d20b0b0d66fa94a38b646eae/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:animated-vector-drawable:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-24.2.0.aar/893678c7d20b0b0d66fa94a38b646eae/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-24.2.0.aar/3950fb5ec06490a6c75b01ae1939027b/AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:support-vector-drawable:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-24.2.0.aar/3950fb5ec06490a6c75b01ae1939027b/AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:support-core-utils:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/da4fc566bfbaf9356b298359e83b9f26/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/da4fc566bfbaf9356b298359e83b9f26/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/02bd3054f53ec3f6a8865f897d91064a/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/02bd3054f53ec3f6a8865f897d91064a/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/cf746b899d58171bbed007a6e3edc022/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/cf746b899d58171bbed007a6e3edc022/AndroidManifest.xml:25:5-20
+ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:13:5-35:19
+MERGED from [com.android.support:design:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/design-24.2.0.aar/a9963e19f6e574eff0a7ee102d114907/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/design-24.2.0.aar/a9963e19f6e574eff0a7ee102d114907/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-vision:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-vision-9.4.0.aar/75328ecd354b1871bc4ae6cb8c402bba/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-vision:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-vision-9.4.0.aar/75328ecd354b1871bc4ae6cb8c402bba/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/1a3593fa7c71802873f8ec925592a452/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/1a3593fa7c71802873f8ec925592a452/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.4.0.aar/f5e6b33999b8934a3d3915d047e5b8a9/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.4.0.aar/f5e6b33999b8934a3d3915d047e5b8a9/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.4.0.aar/92b000bcf68216a07208b5495806e9a1/AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.4.0.aar/92b000bcf68216a07208b5495806e9a1/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:appcompat-v7:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/095ecbf226d1b5df9c79b1204153c686/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/095ecbf226d1b5df9c79b1204153c686/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-v4-24.2.0.aar/d219c787a9c32651b1a1b0977c5cf31e/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-v4-24.2.0.aar/d219c787a9c32651b1a1b0977c5cf31e/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/c19d712481edbc9898d7a89c3151af27/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/c19d712481edbc9898d7a89c3151af27/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/bd8318d16ee6b2a1b37953292cce5388/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/bd8318d16ee6b2a1b37953292cce5388/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-24.2.0.aar/29bb7f8986b1d513421f780d151309d5/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-24.2.0.aar/29bb7f8986b1d513421f780d151309d5/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-24.2.0.aar/be3d947ef75e344a564d094357d51130/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-24.2.0.aar/be3d947ef75e344a564d094357d51130/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-core-utils:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/7aa7e5981b7b10560a87005240d01447/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/7aa7e5981b7b10560a87005240d01447/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/c73e7a08df850d2958325e994c4a570b/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/c73e7a08df850d2958325e994c4a570b/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/697ad98d617fa8cb1dbe19c60f1516f4/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/697ad98d617fa8cb1dbe19c60f1516f4/AndroidManifest.xml:25:5-20
 	android:supportsRtl
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:17:9-37
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:19:9-37
 	android:label
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:16:9-37
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:18:9-37
 	android:hardwareAccelerated
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:14:9-43
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:16:9-43
 	android:fullBackupContent
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:13:9-42
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:15:9-42
 	android:icon
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:15:9-38
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:17:9-38
 	android:allowBackup
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:14:9-35
 	android:theme
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:18:9-47
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:20:9-47
 meta-data#com.google.android.gms.version
-ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:19:9-21:69
-MERGED from [com.google.android.gms:play-services-basement:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.4.0.aar/b39f5c11a836e1e174eeccba36393b2a/AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.4.0.aar/b39f5c11a836e1e174eeccba36393b2a/AndroidManifest.xml:21:9-23:69
+ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.4.0.aar/92b000bcf68216a07208b5495806e9a1/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.4.0.aar/92b000bcf68216a07208b5495806e9a1/AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:21:13-66
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:23:13-66
 	android:name
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:20:13-58
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:22:13-58
 meta-data#com.google.android.gms.vision.DEPENDENCIES
-ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:22:9-24:35
+ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:24:9-26:35
 	android:value
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:24:13-32
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:26:13-32
 	android:name
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:23:13-70
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:25:13-70
 activity#com.google.android.gms.samples.vision.ocrreader.OcrCaptureActivity
-ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:26:9-32:20
+ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:28:9-34:20
 	android:label
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:27:13-38
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:29:13-38
 	android:name
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:26:19-100
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:28:19-100
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:28:13-31:29
+ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:30:13-33:29
 action#android.intent.action.MAIN
-ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:29:17-69
+ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:31:17-69
 	android:name
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:29:25-66
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:31:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:30:17-77
+ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:32:17-77
 	android:name
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:30:27-74
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml:32:27-74
 uses-sdk
-INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
-INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
-MERGED from [com.android.support:design:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/design-24.2.0.aar/d308a2d641a5231957315a210df9fc48/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:design:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/design-24.2.0.aar/d308a2d641a5231957315a210df9fc48/AndroidManifest.xml:20:5-43
-MERGED from [com.google.android.gms:play-services-vision:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-vision-9.4.0.aar/f91288c8de2333100f95df3de16a7734/AndroidManifest.xml:4:5-42
-MERGED from [com.google.android.gms:play-services-vision:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-vision-9.4.0.aar/f91288c8de2333100f95df3de16a7734/AndroidManifest.xml:4:5-42
-MERGED from [com.google.android.gms:play-services-base:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/671b682ebb3ff9aab20808d9bff57fa4/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-base:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/671b682ebb3ff9aab20808d9bff57fa4/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-tasks:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.4.0.aar/d6989dacf2924922f51f3af7273bc448/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.4.0.aar/d6989dacf2924922f51f3af7273bc448/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-basement:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.4.0.aar/b39f5c11a836e1e174eeccba36393b2a/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-basement:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.4.0.aar/b39f5c11a836e1e174eeccba36393b2a/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:appcompat-v7:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/7d5653ddaa4093c6849d8ab44dae9497/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/7d5653ddaa4093c6849d8ab44dae9497/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-v4-24.2.0.aar/68e9825deb5f4262bd5d94eed9e80ecf/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-v4-24.2.0.aar/68e9825deb5f4262bd5d94eed9e80ecf/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:recyclerview-v7:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-24.2.0.aar/b3d67da876d4f71935ebaafbd9896ea3/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-24.2.0.aar/b3d67da876d4f71935ebaafbd9896ea3/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-fragment:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/67aebe8a6a4e77792fadca37a76d6646/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/67aebe8a6a4e77792fadca37a76d6646/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-ui:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/9c32c710f48840851d31ce00ab3ba9e4/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/9c32c710f48840851d31ce00ab3ba9e4/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:animated-vector-drawable:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-24.2.0.aar/893678c7d20b0b0d66fa94a38b646eae/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-24.2.0.aar/893678c7d20b0b0d66fa94a38b646eae/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-24.2.0.aar/3950fb5ec06490a6c75b01ae1939027b/AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:support-vector-drawable:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-24.2.0.aar/3950fb5ec06490a6c75b01ae1939027b/AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:support-core-utils:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/da4fc566bfbaf9356b298359e83b9f26/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/da4fc566bfbaf9356b298359e83b9f26/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-media-compat:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/02bd3054f53ec3f6a8865f897d91064a/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/02bd3054f53ec3f6a8865f897d91064a/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-compat:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/cf746b899d58171bbed007a6e3edc022/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/cf746b899d58171bbed007a6e3edc022/AndroidManifest.xml:21:5-23:58
-INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
-INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
+INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
+INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/design-24.2.0.aar/a9963e19f6e574eff0a7ee102d114907/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/design-24.2.0.aar/a9963e19f6e574eff0a7ee102d114907/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-vision:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-vision-9.4.0.aar/75328ecd354b1871bc4ae6cb8c402bba/AndroidManifest.xml:4:5-42
+MERGED from [com.google.android.gms:play-services-vision:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-vision-9.4.0.aar/75328ecd354b1871bc4ae6cb8c402bba/AndroidManifest.xml:4:5-42
+MERGED from [com.google.android.gms:play-services-base:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/1a3593fa7c71802873f8ec925592a452/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/1a3593fa7c71802873f8ec925592a452/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-tasks:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.4.0.aar/f5e6b33999b8934a3d3915d047e5b8a9/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-tasks-9.4.0.aar/f5e6b33999b8934a3d3915d047e5b8a9/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.4.0.aar/92b000bcf68216a07208b5495806e9a1/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-basement-9.4.0.aar/92b000bcf68216a07208b5495806e9a1/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:appcompat-v7:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/095ecbf226d1b5df9c79b1204153c686/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/095ecbf226d1b5df9c79b1204153c686/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-v4-24.2.0.aar/d219c787a9c32651b1a1b0977c5cf31e/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-v4-24.2.0.aar/d219c787a9c32651b1a1b0977c5cf31e/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:recyclerview-v7:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-24.2.0.aar/3749f02ce68e61333ea074e4227f252e/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-24.2.0.aar/3749f02ce68e61333ea074e4227f252e/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-fragment:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/c19d712481edbc9898d7a89c3151af27/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/c19d712481edbc9898d7a89c3151af27/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/bd8318d16ee6b2a1b37953292cce5388/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/bd8318d16ee6b2a1b37953292cce5388/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:animated-vector-drawable:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-24.2.0.aar/29bb7f8986b1d513421f780d151309d5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-24.2.0.aar/29bb7f8986b1d513421f780d151309d5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-24.2.0.aar/be3d947ef75e344a564d094357d51130/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-vector-drawable:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-24.2.0.aar/be3d947ef75e344a564d094357d51130/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-core-utils:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/7aa7e5981b7b10560a87005240d01447/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/7aa7e5981b7b10560a87005240d01447/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-media-compat:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/c73e7a08df850d2958325e994c4a570b/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/c73e7a08df850d2958325e994c4a570b/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/697ad98d617fa8cb1dbe19c60f1516f4/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/697ad98d617fa8cb1dbe19c60f1516f4/AndroidManifest.xml:21:5-23:58
+INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
+INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:24.2.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/7d5653ddaa4093c6849d8ab44dae9497/AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:24.2.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/095ecbf226d1b5df9c79b1204153c686/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
-		ADDED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/Jimmy/hack/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Jon/GitHub/hackprinceton2018/hackprinceton2018/ocr-reader-complete/app/src/main/AndroidManifest.xml
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/671b682ebb3ff9aab20808d9bff57fa4/AndroidManifest.xml:20:9-22:45
+ADDED from [com.google.android.gms:play-services-base:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/1a3593fa7c71802873f8ec925592a452/AndroidManifest.xml:20:9-22:45
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/671b682ebb3ff9aab20808d9bff57fa4/AndroidManifest.xml:22:19-43
+		ADDED from [com.google.android.gms:play-services-base:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/1a3593fa7c71802873f8ec925592a452/AndroidManifest.xml:22:19-43
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/671b682ebb3ff9aab20808d9bff57fa4/AndroidManifest.xml:21:19-78
+		ADDED from [com.google.android.gms:play-services-base:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/1a3593fa7c71802873f8ec925592a452/AndroidManifest.xml:21:19-78
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:9.4.0] /Users/Jimmy/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/671b682ebb3ff9aab20808d9bff57fa4/AndroidManifest.xml:20:19-85
+		ADDED from [com.google.android.gms:play-services-base:9.4.0] /Users/Jon/.gradle/caches/transforms-1/files-1.1/play-services-base-9.4.0.aar/1a3593fa7c71802873f8ec925592a452/AndroidManifest.xml:20:19-85

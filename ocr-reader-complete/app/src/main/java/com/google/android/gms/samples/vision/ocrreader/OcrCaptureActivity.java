@@ -53,11 +53,18 @@ import com.google.android.gms.samples.vision.ocrreader.ui.camera.CameraSourcePre
 import com.google.android.gms.samples.vision.ocrreader.ui.camera.GraphicOverlay;
 import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
 
 import java.io.IOException;
 import java.util.Locale;
 
 import android.Manifest;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import cz.msebera.android.httpclient.Header;
 
 /**
  * Activity for the Ocr Detecting app.  This app detects text and displays the value with the
@@ -444,6 +451,8 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
             text = graphic.getTextBlock();
             if (text != null && text.getValue() != null) {
                 Log.d(TAG, "text data is being spoken! " + text.getValue());
+
+                getImage(text.getValue());
                 // Speak the string.
                 tts.speak(text.getValue(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
             }
@@ -475,6 +484,44 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
     @Override
     public void onProviderDisabled(String s) {
 
+    }
+
+    public void getImage(String text){
+        String url = "https://www.googleapis.com/customsearch/v1";
+
+        RequestParams rp = new RequestParams();
+
+        String key = "key=AIzaSyDILD6vN6I_Lv9Ow4E1OZGu9zQ0BTRWnU8";
+        String cx = "cx=000762501029482588885%3Agp376tgsdck";
+        String searchType = "searchType=image";
+        String q = "q=" + text;
+
+        /*
+        rp.add("key", "AIzaSyBGCI441Re4pcBQTTRTBtZupqMB82mg76o");
+        rp.add("cx", "000762501029482588885%3Agp376tgsdck");
+        rp.add("searchType", "image");
+        rp.add("q", "blue point grill");
+        */
+
+        HttpUtils.get(url + "?" + key + "&" + cx + "&" + searchType + "&" + q, rp, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                // If the response is JSONObject instead of expected JSONArray
+                System.out.println("got successful post");
+                Log.d("asd", "---------------- this is response : " + response);
+                try {
+                    JSONObject serverResp = new JSONObject(response.toString());
+                } catch (JSONException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                Log.d(responseString , "onFailure : "+statusCode);
+            }
+        });
     }
 
     private class CaptureGestureListener extends GestureDetector.SimpleOnGestureListener {
