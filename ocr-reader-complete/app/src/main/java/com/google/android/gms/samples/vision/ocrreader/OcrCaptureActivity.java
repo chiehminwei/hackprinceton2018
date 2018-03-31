@@ -50,9 +50,12 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.GestureDetector;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -67,6 +70,7 @@ import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 import java.util.List;
@@ -154,10 +158,10 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
                     @Override
                     public void onInit(final int status) {
                         if (status == TextToSpeech.SUCCESS) {
-                            Log.d("OnInitListener", "Text to speech engine started successfully.");
+                            //Log.d("OnInitListener", "Text to speech engine started successfully.");
                             tts.setLanguage(Locale.US);
                         } else {
-                            Log.d("OnInitListener", "Error starting the text to speech engine.");
+                            //Log.d("OnInitListener", "Error starting the text to speech engine.");
                         }
                     }
                 };
@@ -222,7 +226,7 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
      * sending the request.
      */
     private void requestCameraPermission() {
-        Log.w(TAG, "Camera permission is not granted. Requesting permission");
+        //Log.w(TAG, "Camera permission is not granted. Requesting permission");
 
         final String[] permissions = new String[]{Manifest.permission.CAMERA};
 
@@ -286,7 +290,7 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
             // isOperational() can be used to check if the required native libraries are currently
             // available.  The detectors will automatically become operational once the library
             // downloads complete on device.
-            Log.w(TAG, "Detector dependencies are not yet available.");
+            //Log.w(TAG, "Detector dependencies are not yet available.");
 
             // Check for low storage.  If there is low storage, the native library will not be
             // downloaded, so detection will not become operational.
@@ -295,7 +299,7 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
 
             if (hasLowStorage) {
                 Toast.makeText(this, R.string.low_storage_error, Toast.LENGTH_LONG).show();
-                Log.w(TAG, getString(R.string.low_storage_error));
+                //Log.w(TAG, getString(R.string.low_storage_error));
             }
         }
 
@@ -401,7 +405,7 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
             }
             case RC_HANDLE_CAMERA_PERM: {
                 if (grantResults.length != 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Log.d(TAG, "Camera permission granted - initialize the camera source");
+                    //Log.d(TAG, "Camera permission granted - initialize the camera source");
                     // we have permission, so create the camerasource
                     boolean autoFocus = getIntent().getBooleanExtra(AutoFocus, false);
                     boolean useFlash = getIntent().getBooleanExtra(UseFlash, false);
@@ -409,8 +413,8 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
                     return;
                 }
 
-                Log.e(TAG, "Permission not granted: results len = " + grantResults.length +
-                        " Result code = " + (grantResults.length > 0 ? grantResults[0] : "(empty)"));
+                //Log.e(TAG, "Permission not granted: results len = " + grantResults.length +
+                //        " Result code = " + (grantResults.length > 0 ? grantResults[0] : "(empty)"));
 
                 DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
@@ -453,7 +457,7 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
             try {
                 mPreview.start(mCameraSource, mGraphicOverlay);
             } catch (IOException e) {
-                Log.e(TAG, "Unable to start camera source.", e);
+                //Log.e(TAG, "Unable to start camera source.", e);
                 mCameraSource.release();
                 mCameraSource = null;
             }
@@ -473,16 +477,18 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
         if (graphic != null) {
             text = graphic.getTextBlock();
             if (text != null && text.getValue() != null) {
-                Log.d(TAG, "text data is being spoken! " + text.getValue());
-
-                getImage(text.getValue());
+                //Log.d(TAG, "text data is being spoken! " + text.getValue());
+                String [] aha = {"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6wiqX3m1YiIy3A5bGpMlFnLgalYl7c1mAcHjXtTrLXsvIDCPs", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6wiqX3m1YiIy3A5bGpMlFnLgalYl7c1mAcHjXtTrLXsvIDCPs"};
+                createDialog(text.getValue(), aha);
+                // getImage(text.getValue());
                 // Speak the string.
-                tts.speak(text.getValue(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
+                // tts.speak(text.getValue(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
+
             } else {
-                Log.d(TAG, "text data is null");
+                //Log.d(TAG, "text data is null");
             }
         } else {
-            Log.d(TAG, "no text detected");
+            //Log.d(TAG, "no text detected");
         }
         return text != null;
     }
@@ -511,6 +517,7 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
 //                            placeLikelihood.getPlace().getName(),
 //                            placeLikelihood.getLikelihood()));
 //                }
+
                 currentLocation = likelyPlaces.get(0).getPlace().getName().toString();
                 likelyPlaces.release();
             }
@@ -568,6 +575,33 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
                 Log.d(responseString , "onFailure : "+statusCode);
             }
         });
+    }
+
+    public void createDialog(String text, String[] urls) {
+        //LayoutInflater li = LayoutInflater.from(getApplicationContext());
+        //View promptsView = li.inflate(R.layout.dialog,null);
+        LinearLayout picLL = new LinearLayout(this);
+        picLL.layout(0, 0, 100, 100);
+        picLL.setLayoutParams(new LinearLayout.LayoutParams(100, 100));
+        picLL.setOrientation(LinearLayout.VERTICAL);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(OcrCaptureActivity.this);
+        // builder.setIcon(R.drawable.ic_note_add_black_24dp);
+        for (String url: urls) {
+            ImageView myImage = new ImageView(this);
+
+            picLL.addView(myImage);
+            Picasso.get()
+                    .load(url)
+                    //.resize(50, 50)
+                    //.centerCrop()
+                    .into(myImage);
+        }
+
+
+        builder.setTitle(text);
+        builder.setView(picLL);
+        builder.show();
     }
 
     private class CaptureGestureListener extends GestureDetector.SimpleOnGestureListener {
