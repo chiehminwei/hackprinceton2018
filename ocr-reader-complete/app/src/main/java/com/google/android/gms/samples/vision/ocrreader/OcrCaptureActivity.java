@@ -73,11 +73,13 @@ import com.loopj.android.http.RequestParams;
 import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
 import android.Manifest;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -121,6 +123,9 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
     protected PlaceDetectionClient mPlaceDetectionClient;
     String currentLocation;
 
+    // Used for storing image url links
+    ArrayList<String> imageURLs;
+
     /**
      * Initializes the UI and creates the detector pipeline.
      */
@@ -135,6 +140,8 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
         // Set good defaults for capturing text.
         boolean autoFocus = true;
         boolean useFlash = false;
+
+        imageURLs = new ArrayList<String>();
 
         // Check for the camera permission before accessing the camera.  If the
         // permission is not granted yet, request permission.
@@ -478,9 +485,12 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
             text = graphic.getTextBlock();
             if (text != null && text.getValue() != null) {
                 //Log.d(TAG, "text data is being spoken! " + text.getValue());
+                // this sets ImageURLs to have the top 4 url image links so far
+                getImage(text.getValue());
+
                 String [] aha = {"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6wiqX3m1YiIy3A5bGpMlFnLgalYl7c1mAcHjXtTrLXsvIDCPs", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6wiqX3m1YiIy3A5bGpMlFnLgalYl7c1mAcHjXtTrLXsvIDCPs"};
                 createDialog(text.getValue(), aha);
-                // getImage(text.getValue());
+
                 // Speak the string.
                 // tts.speak(text.getValue(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
 
@@ -539,15 +549,17 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
 
     }
 
-    public void getImage(String text){
-        String url = "https://www.googleapis.com/customsearch/v1";
+    public void getImage(final String text){
+        String url = "https://francis.stdlib.com/googlecse/";
+        // String url = "https://www.googleapis.com/customsearch/v1";
 
         RequestParams rp = new RequestParams();
 
         String key = "key=AIzaSyDILD6vN6I_Lv9Ow4E1OZGu9zQ0BTRWnU8";
         String cx = "cx=000762501029482588885%3Agp376tgsdck";
         String searchType = "searchType=image";
-        String q = "q=" + text;
+        // Add the text and current location for the image
+        String q = "q=" + currentLocation + text;
 
         /*
         rp.add("key", "AIzaSyBGCI441Re4pcBQTTRTBtZupqMB82mg76o");
@@ -564,6 +576,29 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
                 Log.d("asd", "---------------- this is response : " + response);
                 try {
                     JSONObject serverResp = new JSONObject(response.toString());
+                    try {
+
+
+                        String phrase = text;
+
+                        JSONArray result = serverResp.getJSONArray("items");
+                        String link1 = result.getJSONObject(0).getString("link");
+                        String link2 = result.getJSONObject(1).getString("link");
+                        String link3 = result.getJSONObject(2).getString("link");
+                        String link4 = result.getJSONObject(3).getString("link");
+
+                        String [] imageURLS = new String[4];
+
+                        imageURLs.add(link1);
+                        imageURLs.add(link2);
+                        imageURLs.add(link3);
+                        imageURLs.add(link4);
+
+                        createDialog(phrase, imageURLS);
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
                 } catch (JSONException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
