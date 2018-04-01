@@ -54,8 +54,10 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -112,8 +114,8 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
     private ScaleGestureDetector scaleGestureDetector;
     private GestureDetector gestureDetector;
 
-    // A TextToSpeech engine for speaking a String value.
-    private TextToSpeech tts;
+//    // A TextToSpeech engine for speaking a String value.
+//    private TextToSpeech tts;
 
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     LocationManager locationManager;
@@ -123,9 +125,6 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
     protected PlaceDetectionClient mPlaceDetectionClient;
     String currentLocation;
 
-    // Used for storing image url links
-    ArrayList<String> imageURLs;
-
     /**
      * Initializes the UI and creates the detector pipeline.
      */
@@ -133,6 +132,7 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.ocr_capture);
+        currentLocation = "";
 
         mPreview = (CameraSourcePreview) findViewById(R.id.preview);
         mGraphicOverlay = (GraphicOverlay<OcrGraphic>) findViewById(R.id.graphicOverlay);
@@ -140,8 +140,6 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
         // Set good defaults for capturing text.
         boolean autoFocus = true;
         boolean useFlash = false;
-
-        imageURLs = new ArrayList<String>();
 
         // Check for the camera permission before accessing the camera.  If the
         // permission is not granted yet, request permission.
@@ -155,24 +153,24 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
         gestureDetector = new GestureDetector(this, new CaptureGestureListener());
         scaleGestureDetector = new ScaleGestureDetector(this, new ScaleListener());
 
-        Snackbar.make(mGraphicOverlay, "Tap to Speak. Pinch/Stretch to zoom",
+        Snackbar.make(mGraphicOverlay, "Tap to Show Picture. Pinch/Stretch to zoom",
                 Snackbar.LENGTH_LONG)
                 .show();
 
         // Set up the Text To Speech engine.
-        TextToSpeech.OnInitListener listener =
-                new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(final int status) {
-                        if (status == TextToSpeech.SUCCESS) {
-                            //Log.d("OnInitListener", "Text to speech engine started successfully.");
-                            tts.setLanguage(Locale.US);
-                        } else {
-                            //Log.d("OnInitListener", "Error starting the text to speech engine.");
-                        }
-                    }
-                };
-        tts = new TextToSpeech(this.getApplicationContext(), listener);
+//        TextToSpeech.OnInitListener listener =
+//                new TextToSpeech.OnInitListener() {
+//                    @Override
+//                    public void onInit(final int status) {
+//                        if (status == TextToSpeech.SUCCESS) {
+//                            //Log.d("OnInitListener", "Text to speech engine started successfully.");
+//                            tts.setLanguage(Locale.US);
+//                        } else {
+//                            //Log.d("OnInitListener", "Error starting the text to speech engine.");
+//                        }
+//                    }
+//                };
+//        tts = new TextToSpeech(this.getApplicationContext(), listener);
 
         // Construct a GeoDataClient.
         mGeoDataClient = Places.getGeoDataClient(this, null);
@@ -488,8 +486,8 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
                 // this sets ImageURLs to have the top 4 url image links so far
                 getImage(text.getValue());
 
-                String [] aha = {"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6wiqX3m1YiIy3A5bGpMlFnLgalYl7c1mAcHjXtTrLXsvIDCPs", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6wiqX3m1YiIy3A5bGpMlFnLgalYl7c1mAcHjXtTrLXsvIDCPs"};
-                createDialog(text.getValue(), aha);
+                //String [] aha = {"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6wiqX3m1YiIy3A5bGpMlFnLgalYl7c1mAcHjXtTrLXsvIDCPs", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6wiqX3m1YiIy3A5bGpMlFnLgalYl7c1mAcHjXtTrLXsvIDCPs"};
+                //createDialog(text.getValue(), aha);
 
                 // Speak the string.
                 // tts.speak(text.getValue(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
@@ -506,7 +504,6 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
     @Override
     public void onLocationChanged(Location loc) {
 
-
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
@@ -521,15 +518,21 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
         placeResult.addOnCompleteListener(new OnCompleteListener<PlaceLikelihoodBufferResponse>() {
             @Override
             public void onComplete(@NonNull Task<PlaceLikelihoodBufferResponse> task) {
-                PlaceLikelihoodBufferResponse likelyPlaces = task.getResult();
+                try {
+                    PlaceLikelihoodBufferResponse likelyPlaces = task.getResult();
 //                for (PlaceLikelihood placeLikelihood : likelyPlaces) {
 //                    Log.i(TAG, String.format("Place '%s' has likelihood: %g",
 //                            placeLikelihood.getPlace().getName(),
 //                            placeLikelihood.getLikelihood()));
 //                }
 
-                currentLocation = likelyPlaces.get(0).getPlace().getName().toString();
-                likelyPlaces.release();
+                    currentLocation = likelyPlaces.get(0).getPlace().getName().toString();
+                    likelyPlaces.release();
+                }
+                catch(Error e) {
+
+                }
+
             }
         });
     }
@@ -555,11 +558,11 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
 
         RequestParams rp = new RequestParams();
 
-        String key = "key=AIzaSyDILD6vN6I_Lv9Ow4E1OZGu9zQ0BTRWnU8";
-        String cx = "cx=000762501029482588885%3Agp376tgsdck";
+        String key = "key=AIzaSyCfOVJvCt534pFKNdQyPdiDlBW5x85EKcw";
+        String cx = "cx=010916556170582802596:xqmssvmbqkg";
         String searchType = "searchType=image";
         // Add the text and current location for the image
-        String q = "q=" + currentLocation + text;
+        String q = "q=" + text + " " + currentLocation;
 
         /*
         rp.add("key", "AIzaSyBGCI441Re4pcBQTTRTBtZupqMB82mg76o");
@@ -572,10 +575,13 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 // If the response is JSONObject instead of expected JSONArray
-                System.out.println("got successful post");
-                Log.d("asd", "---------------- this is response : " + response);
+                //System.out.println("got successful post");
+                //Log.d("asd", "---------------- this is response : " + response);
                 try {
                     JSONObject serverResp = new JSONObject(response.toString());
+                    Log.d(TAG, serverResp.toString());
+                    Log.d(TAG, currentLocation);
+
                     try {
 
 
@@ -583,18 +589,22 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
 
                         JSONArray result = serverResp.getJSONArray("items");
                         String link1 = result.getJSONObject(0).getString("link");
-                        String link2 = result.getJSONObject(1).getString("link");
-                        String link3 = result.getJSONObject(2).getString("link");
-                        String link4 = result.getJSONObject(3).getString("link");
 
-                        String [] imageURLS = new String[4];
+//                        Log.v(TAG, link1);
+
+
+//                        String link2 = result.getJSONObject(1).getString("link");
+//                        String link3 = result.getJSONObject(2).getString("link");
+//                        String link4 = result.getJSONObject(3).getString("link");
+
+                        ArrayList<String> imageURLs = new ArrayList();
 
                         imageURLs.add(link1);
-                        imageURLs.add(link2);
-                        imageURLs.add(link3);
-                        imageURLs.add(link4);
+                        //imageURLs.add(link2);
+                        //imageURLs.add(link3);
+                        //imageURLs.add(link4);
 
-                        createDialog(phrase, imageURLS);
+                        createDialog(phrase, imageURLs);
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -612,23 +622,27 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
         });
     }
 
-    public void createDialog(String text, String[] urls) {
-        //LayoutInflater li = LayoutInflater.from(getApplicationContext());
-        //View promptsView = li.inflate(R.layout.dialog,null);
+    public void createDialog(String text, ArrayList<String> urls) {
+//        LayoutInflater li = LayoutInflater.from(getApplicationContext());
+//        View promptsView = li.inflate(R.layout.sample,null);
         LinearLayout picLL = new LinearLayout(this);
         picLL.layout(0, 0, 100, 100);
-        picLL.setLayoutParams(new LinearLayout.LayoutParams(100, 100));
+        picLL.setLayoutParams(new LinearLayout.LayoutParams(700, 700));
         picLL.setOrientation(LinearLayout.VERTICAL);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(OcrCaptureActivity.this);
         // builder.setIcon(R.drawable.ic_note_add_black_24dp);
+
         for (String url: urls) {
             ImageView myImage = new ImageView(this);
+//            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 200);
+//            params.setMargins(5,10,5,10);
+//            myImage.setLayoutParams(params);
 
             picLL.addView(myImage);
             Picasso.get()
                     .load(url)
-                    //.resize(50, 50)
+                    .resize(1000, 1000)
                     //.centerCrop()
                     .into(myImage);
         }
@@ -636,6 +650,10 @@ public final class OcrCaptureActivity extends AppCompatActivity implements Locat
 
         builder.setTitle(text);
         builder.setView(picLL);
+        //ScrollView m_Scroll = new ScrollView(this);
+        //m_Scroll.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        //m_Scroll.addView(picLL);
+
         builder.show();
     }
 
